@@ -41,14 +41,10 @@
         </ul>
     {% endif %}
     {%else%}
-    <div class="input-group mb-3">
-            <form action="/" method="post">
-                <input type="text" name="term" class="form-control" placeholder="Enter URL" aria-label="Enter URL" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-            </form>
-            </div>
-          </div>
+    <form action="/" method="post">
+        <input type="text" name="term">
+        <button>Search</button>
+    </form>
     {% endif %}
    
  <!-- Optional JavaScript -->
