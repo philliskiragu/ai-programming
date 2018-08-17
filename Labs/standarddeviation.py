@@ -80,19 +80,28 @@ def get_variance(marks):
         
     variance = marks_total/len(marks)
 
-    return marks_total
+    return variance
 
+def get_variance_value(marks):
+    """
+    Function to get the variance value for plotting given marks
+    """
+    average_mark  = get_average(marks)
 
-def plot_marks_against_variance(marks, variance):
+    variance_value = [(i - average_mark)**2 for i in marks]
+    
+    return variance_value
+
+def plot_marks_against_variance(marks, variance_value):
     """
     Function to plot the marks against the variance
     """
-    print(variance)
-    plt.plot(marks, variance)
+    
+    plt.scatter(marks, variance_value, s=10)
     plt.show()
 
 
 if __name__ == '__main__':
     marks = generate_marks()
-    variance = get_variance(marks)
-    plot_marks_against_variance(marks, variance)
+    variance_value = get_variance_value(marks)
+    plot_marks_against_variance(marks, variance_value)
