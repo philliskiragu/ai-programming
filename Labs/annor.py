@@ -1,8 +1,5 @@
 import numpy as np
 from IPython.display import Image,display
-import matplotlib
-matplotlib.use('TkAgg')
-import matplotlib.pyplot as plt
 
 
 #training data
@@ -115,7 +112,7 @@ def predict(network, row):
     """ Function for prediction"""
     outputs = forward_propagation(net, row)
     return outputs
-    
+
 
 if __name__ =='__main__':   
     net=initialize_network()
