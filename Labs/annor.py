@@ -115,8 +115,8 @@ def predict(network, row):
     """ Function for prediction"""
     outputs = forward_propagation(net, row)
     return outputs
+    
 
-#Main Function
 if __name__ =='__main__':   
     net=initialize_network()
 
