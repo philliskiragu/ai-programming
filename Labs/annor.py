@@ -119,14 +119,14 @@ def predict(network, row):
 #Main Function
 if __name__ =='__main__':   
     net=initialize_network()
-    
+
     draw_ann_network(net)  
 
     errors=training(net,100000, 0.05,2)
 
-    first_truth_value = input("Please enter first_truth_value: ")
-    second_truth_value = input("Please enter second_truth_value: ")
+    value_1 = input("Enter the first value ")
+    value_2 = input("Enter the second value: ")
     
-    pred=predict(net,np.array([int(first_truth_value), int(second_truth_value)]))
+    pred=predict(net,np.array([int(value_1), int(value_2)]))
     output=np.argmax(pred)
-    print("The output is ",output)
+    print("OUTPUT ",output)
